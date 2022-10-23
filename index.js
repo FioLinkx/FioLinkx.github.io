@@ -38,7 +38,8 @@ function GroupImageOrganize(groupId) {
 
             switch (i) {
                 case 0:
-                    $(val).addClass('opacity-50 p-12 absolute top-1/2 left-1/2 transform -translate-x-full -translate-y-1/2')
+                    $(val).addClass('opacity-50 p-12 absolute top-1/2 left-1/2 transform -translate-x-full -translate-y-1/2');
+                    $(val).show();
                     break;
                 case 1:
                     $(val).addClass('z-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2')
@@ -46,7 +47,8 @@ function GroupImageOrganize(groupId) {
                     $(val).show();
                     break;
                 case 2:
-                    $(val).addClass('opacity-50 p-12 absolute top-1/2 left-1/2 transform -translate-y-1/2')
+                    $(val).addClass('opacity-50 p-12 absolute top-1/2 left-1/2 transform -translate-y-1/2');
+                    $(val).show();
                     break;
                 default:
                     $(val).hide()

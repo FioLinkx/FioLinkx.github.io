@@ -87,11 +87,47 @@
                 Profile
                 <div id="cache-profile" class="cache hidden bg-gray-700 w-full h-[1px] transform -translate-y-[1px]"></div>
             </div>
+            <div id="autre" class="onglet ml-4 h-6 border-x rounded-t-xl border-t bg-gray-800 w-28 cursor-pointer">
+                Autre
+                <div id="cache-autre" class="cache hidden bg-gray-700 w-full h-[1px] transform -translate-y-[1px]"></div>
+            </div>
         </div>
         <div class="border rounded-xl bg-gray-700 p-6 text-white">
             <div id="content-acceuil" class="content text-center text-xl">Vous pouvez découvrir toutes ses fonctionnalités à travers les différents onglets</div>
 
-            <div id="content-info" class="content hidden">info</div>
+            <div id="content-info" class="content hidden">
+                <p class="mb-6 text-center">
+                    Merlin possède les <span class="text-[#994E98] font-bold">informations</span> générale pour tout les héros.
+                </p>
+                <p class="text-xl">
+                    Les commandes d'informations (/stuff, /asso, /skill, /ultime, /relic, /passif, /info)
+                </p>
+                <p class="mb-6">
+                    Affiche ces informations pour l'intégralié des héros du jeux, les nouveaux personnages sont ajoutés quelques jours après la sortie sur la version japonaise
+                </p>
+                <div id="gimg-info" class="group-image w-full relative h-96">
+                    <div><img src="commands/info-asso.png"/></div>
+                    <div><img src="commands/info-global.png"/></div>
+                    <div><img src="commands/info-stuff.png"/></div>
+                    <div><img src="commands/info-passif.png"/></div>
+                    <div><img src="commands/info-relic.png"/></div>
+                    <div><img src="commands/info-skill.png"/></div>
+                    <div><img src="commands/info-ultime.png"/></div>
+                </div>
+                <hr class="my-4">
+                <p class="text-xl">
+                    Les anniversaires (/birthday)
+                </p>
+                <p>
+                    Affiche les anniversaires ainsi que les cadeaux pour un héros, dans un mois ou les 6 prochaines date. (note: les anniversaire sont notifier automatiquement avec le /notif-channel)
+                </p>
+                <div id="gimg-birthday" class="group-image w-full relative h-96">
+                    <div><img src="commands/birthday-hero.png"/></div>
+                    <div><img src="commands/birthday-mois.png"/></div>
+                    <div><img src="commands/birthday-next.png"/></div>
+                </div>
+            </div>
+
             <div id="content-guide" class="content hidden">
                 <p class="mb-6 text-center">
                     Merlin propose des <span class="text-[#994E98] font-bold">guides</span> dans différent contenue du jeux tel que,
@@ -140,15 +176,103 @@
                 <p class="text-xl">
                     Les duels à équipes aléatoires (/random-battle @adversaire)
                 </p>
-                <p>
+                <p class="mb-6">
                     Permet de générer 2 équipes complétement aléatoire, avec la possibilité de désactiver les héros de festival et de collaboration, ou encore de changer un héros de l'équipe.
                 </p>
-                <div class="w-full flex">
-                    <div class="px-4"><img class="2/5 border" src="commands/rb-1.png"/></div>
-                    <div class="px-4"><img class="2/5 border" src="commands/rb-reroll.png"/></div>
+                <div class="w-full flex items-center">
+                    <div class="px-4"><img class="border" src="commands/rb-1.png"/></div>
+                    <div class="px-4"><img class="border" src="commands/rb-reroll.png"/></div>
+                </div>
+                <hr class="my-2">
+                <p class="text-xl">
+                    Transforme une photo de profile (/transform)
+                </p>
+                <p class="mb-6">
+                    Rajoute un cadre SSR avec l'attribut demandé à la photo de profile de l'utilisateur, ou de l'utilisateur demandé.
+                </p>
+                <div id="gimg-transform" class="group-image w-full relative h-96">
+                    <div><img src="commands/transform-1.png"/></div>
+                    <div><img src="commands/transform-2.png"/></div>
+                    <div><img src="commands/transform-3.png"/></div>
                 </div>
             </div>
-            <div id="content-profile" class="content hidden">profile</div>
+
+            <div id="content-profile" class="content hidden">
+                <p class="mb-6 text-center">
+                    Merlin possède un système de <span class="text-[#994E98] font-bold">profile</span>.
+                </p>
+                <p class="text-xl">
+                    Les profiles (/profile)
+                </p>
+                <p class="mb-6">
+                    Une commande qui permet d'afficher les informations comme le code amis, la cc box, ou le niveau pour les utilisateurs qui l'ont enregistrés
+                </p>
+                <div class="w-full flex items-center justify-center">
+                    <div><img class="border" src="commands/profile-1.png"/></div>
+                </div>
+                <hr class="my-2">
+                <p class="text-xl">
+                    Pour éditer son profile (/editprofile)
+                </p>
+                <p class="mb-6">
+                    La commande qui permet de changer les informations affiché sur son profile
+                </p>
+                <div class="w-full flex items-center">
+                    <div class="px-4"><img class="border" src="commands/editprofile-1.png"/></div>
+                    <div class="px-4"><img class="border" src="commands/editprofile-error.png"/></div>
+                </div>
+            </div>
+
+            <div id="content-autre" class="content hidden">
+                <p class="mb-6 text-center">
+                    Merlin a également d'autre commande utilitaire.
+                </p>
+                <p class="text-xl">
+                    Le top CC (/top)
+                </p>
+                <p class="mb-6">
+                    Affiche le classement de tous les personnages en terme de CC pour des statistiques de Niv. 100, SA 6, Spé 1 et No stuff/cosme.
+                </p>
+                <div class="w-full flex items-center justify-center">
+                    <div><img class="border" src="commands/top.png"/></div>
+                </div>
+                <hr class="my-2">
+                <p class="text-xl">
+                    Le système de notification (/notif-channel)
+                </p>
+                <p class="mb-6">
+                    Permet d'activer et de définir un salon dans lequel seront envoyé les notifications à 9h00, les notifications concernent les réductions d'endurances, les anniversaires et les event de donation de village.
+                </p>
+                <div id="gimg-notif" class="group-image w-full relative h-48">
+                    <div><img src="commands/notif-1.png"/></div>
+                    <div><img src="commands/notif-2.png"/></div>
+                    <div><img src="commands/notif-3.png"/></div>
+                </div>
+                <hr class="my-2">
+                <p class="text-xl">
+                    La liste des cosmétiques à effet (/skin-effect)
+                </p>
+                <p class="mb-6">
+                    Affiche tout les cosmétiques donnant un effet spécial supplémentaire.
+                </p>
+                <div id="gimg-skin" class="group-image w-full relative h-96">
+                    <div><img src="commands/skin-3.png"/></div>
+                    <div><img src="commands/skin-1.png"/></div>
+                    <div><img src="commands/skin-2.png"/></div>
+                </div>
+                <hr class="my-2">
+                <p class="text-xl">
+                    La recherche (/search)
+                </p>
+                <p class="mb-6">
+                    Cette commande permet de rechercher la liste des héros possédant un effet, ou un tag souhaité.
+                </p>
+                <div id="gimg-search" class="group-image w-full relative h-96">
+                    <div><img src="commands/search-effect.png"/></div>
+                    <div><img src="commands/search-tag.png"/></div>
+                    <div><img src="commands/search-list.png"/></div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,5 +1,7 @@
 jQuery(() => {
     $('.onglet').on('click', function () {
+        $('.onglet').removeClass('!bg-gray-700')
+        $(this).addClass('!bg-gray-700')
         $('.content').hide();
         $('.cache').hide();
         $('#content-' + $(this).attr('id')).show();
